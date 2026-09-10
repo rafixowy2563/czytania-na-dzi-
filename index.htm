@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Czytania na dziś</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f1ea;
+            color: #292929;
+            margin: 0;
+        }
+
+        header {
+            background: #6b4f2a;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .czytanie {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #00000015;
+        }
+
+        h2 {
+            color: #6b4f2a;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>📖 Czytania na dziś</h1>
+        <p id="data"></p>
+    </header>
+
+    <main>
+
+        <div class="czytanie">
+            <h2>📜 Pierwsze czytanie</h2>
+            <p>Treść pierwszego czytania pojawi się tutaj.</p>
+        </div>
+
+        <div class="czytanie">
+            <h2>🎵 Psalm</h2>
+            <p>Treść psalmu pojawi się tutaj.</p>
+        </div>
+
+        <div class="czytanie">
+            <h2>📜 Drugie czytanie</h2>
+            <p>Treść drugiego czytania pojawi się tutaj.</p>
+        </div>
+
+        <div class="czytanie">
+            <h2>✝️ Ewangelia</h2>
+            <p>Treść Ewangelii pojawi się tutaj.</p>
+        </div>
+
+    </main>
+
+    <footer>
+        Czytania na dziś
+    </footer>
+
+    <script>
+        const dzisiaj = new Date();
+
+        const data = dzisiaj.toLocaleDateString("pl-PL", {
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+        });
+
+        document.getElementById("data").textContent = data;
+    </script>
+
+</body>
+</html>
